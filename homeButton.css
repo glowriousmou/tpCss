@@ -1,0 +1,23 @@
+
+.homeButtonContainers {
+    text-align: center;
+}
+
+.home-button {
+    background-color: #0d21a1;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #c71f00;
+}
