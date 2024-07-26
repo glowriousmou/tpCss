@@ -4,19 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les bases de JS</title>
-    <link rel="stylesheet" href="../homeButton.css" />
+    <!-- <link rel="stylesheet" href="../homeButton.css" /> -->
+    <script type="text/javascript" src="../menu.js" defer></script>
   </head>
 
   <body>
-    <div class="homeButtonContainer">
+    <!-- <div class="homeButtonContainer">
       <button
         class="home-button"
         onclick="window.location.href='../index.html'"
       >
         Retour vers la page d'accueil
       </button>
-    </div>
+    </div> -->
     <h1>tpJavascript</h1>
+    <script>
+      const PATH = {
+        cssFile: "../menu.css",
+        homePage: "../index.html",
+        loginPage: "../tpLoginPage/index.html",
+        wordCssPage: "../tpWordToCss/index.html",
+        tpCssPage: "../tpCss/index.html",
+        tpJsPage: "index.html",
+      };
+      document.addEventListener("DOMContentLoaded", function () {
+        loadMenu(PATH);
+      });
+    </script>
     <script src="./index.js"></script>
   </body>
 </html>

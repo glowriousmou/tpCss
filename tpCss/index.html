@@ -7,12 +7,13 @@
     <title>Cours CSS</title>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../homeButton.css">
+    <!-- <link rel="stylesheet" href="../homeButton.css"> -->
+    <script type="text/javascript" src="../menu.js" defer></script>
   </head>
   <body>
-    <div class="homeButtonContainer">
+    <!-- <div class="homeButtonContainer">
       <button class="home-button" onclick="window.location.href='../index.html'">Retour vers la page d'accueil</button>
-  </div>
+  </div> -->
     <header>
       <h1>Les bases de CSS</h1>
     </header>
@@ -51,6 +52,20 @@
         <span id="circle2"></span>
       </div>
     </main>
+    <script>
+      const PATH = {
+        cssFile: "../menu.css",
+        homePage: "../index.html",
+        loginPage: "../tpLoginPage/index.html",
+        wordCssPage: "index.html",
+        tpCssPage: "index.html",
+        tpJsPage: "../tpJavascript/index.html",
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        loadMenu(PATH);
+      });
+    </script>
   </body>
 </html>
 <!-- @glowriousmou-->
