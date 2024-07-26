@@ -3,12 +3,20 @@ body {
     margin: 0;
     padding: 0;
 }
-
-nav {
+.title {
+    text-align: center;
+    margin-top: 20px;
+    color: #c71f00;
+}
+#titrejs {
+    color:blue;
+    font-size: 2rem;
+}
+/*nav {
     background-color: #0d21a1;
     padding: 10px 0;
+    overflow: hidden;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -31,11 +39,98 @@ a {
 a:hover {
     background-color: #c71f00;
     border-radius: 4px;
+} */
+.navbar {
+    background-color: #0d21a1;
+    overflow: hidden;
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+/* .menu li {
+    display: inline;
+}*/
+
+.menu li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
 }
 
-.title {
-    text-align: center;
-    margin-top: 20px;
-    color: #c71f00;
+.menu li a:hover {
+    background-color: #c71f00;
+}
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.hamburger-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+}
+.drawer-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #0d21a1;;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.drawer-menu.open {
+    left: 0;
+}
+
+.drawer-menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-menu-items li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.drawer-menu-items li a:hover {
+    background-color: #c71f00;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        margin: 14px;
+    }
+}
+@media (min-width: 769px) {
+    .drawer-menu {
+        display: none;
+    }
 }
 /* @glowriousmou */

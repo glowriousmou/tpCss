@@ -5,17 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scriptFile.js" ></script>
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+        <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="./tpLoginPage/index.html">Tp Login Page</a></li>
             <li><a href="./tpWordToCss/index.html">Tp Word to Css </a></li>
-            <li><a href="./tpYoutube1/index.html">Tp Youtube</a></li>
+            <li><a href="./tpYoutube1/index.html">Tp Youtube css</a></li>
+            <li><a href="./tpJavascript/index.html">Tp Youtube JS</a></li>
         </ul>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+    <div class="drawer-menu" id="drawerMenu">
+        <ul class="drawer-menu-items">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="./tpLoginPage/index.html">Tp Login Page</a></li>
+            <li><a href="./tpWordToCss/index.html">Tp Word to Css </a></li>
+            <li><a href="./tpYoutube1/index.html">Tp Youtube css</a></li>
+            <li><a href="./tpJavascript/index.html">Tp Youtube JS</a></li>
+        </ul>
+    </div>
     <h1 class="title">TP CSS PAR OUMOU SOW</h1>
+    <!-- <script>
+    alert("hello");
+    </script> -->
+    <!-- <h1 id="titrejs">TP javascript</h1>
+    <script >
+        var message = showMsg("la somme de 10 et 2 est "+somme(10, 2));
+        /* document.addEventListener("DOMContentLoaded", function() {
+            var resultat = somme(10, 2);
+            document.getElementById('resultat').textContent = "La somme est : " + resultat;
+            showMsg("la somme de 10 et 2 est "+resultat) 
+            
+        });*/
+       var titrejsElmt = document.getElementById("titrejs");
+       titrejsElmt.style.color="green";
+       titrejsElmt.innerHTML=message;
+    </script> -->
+    <script>
+        /* const hamburger = document.querySelector('.hamburger-menu');
+        const menu = document.querySelector('.menu');
+        
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        }); */
+        function toggleMenu() {
+            const drawerMenu = document.getElementById('drawerMenu');
+            drawerMenu.classList.toggle('open');
+        }
+        /* function closeDrawerOnResize() {
+            const drawerMenu = document.getElementById('drawerMenu');
+            if (window.innerWidth > 768 && drawerMenu.classList.contains('open')) {
+                drawerMenu.classList.remove('open');
+            }
+        }
+
+        window.addEventListener('resize', closeDrawerOnResize); */
+    </script>
 </body>
 </html>
 <!-- @glowriousmou-->
